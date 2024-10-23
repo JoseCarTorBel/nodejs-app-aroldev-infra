@@ -50,9 +50,10 @@ securityContext: {}
 service:
   enabled: true
   name: nodejs-svc
-  type: ClusterIP
+  type: NodePort
   port: 9080
   targetPort: 5000
+  nodePort: 30007
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
